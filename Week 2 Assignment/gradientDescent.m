@@ -21,7 +21,7 @@ for iter = 1:num_iters
     
     standard_error = hypothesis - y;
     
-    delta_val = (standard_error' * X)' ./ m;
+    delta_val = (X' * standard_error) / m;
     
     theta = theta - (alpha .* delta_val);
     
